@@ -81,15 +81,15 @@ class Solution {
     //Function to check if the linked list has a loop.
     public static boolean detectLoop(Node head){
         // Add code here
-        Node fast = head.next;
+        Node fast = head;
         Node slow = head;
-        while(fast!=slow)
+        while(fast!=null && fast.next!=null)
         {
-            if(fast==null || fast.next==null)
-                return false;
             fast = fast.next.next;
             slow = slow.next;
+            if(slow==fast)
+                return true;
         }
-        return true;
+        return false;
     }
 }
