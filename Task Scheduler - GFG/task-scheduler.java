@@ -87,7 +87,6 @@ class GFG {
 
 
 // User function Template for Java
-
 class Solution {
     static int leastInterval(int N, int k, char tasks[]) {
         // code here
