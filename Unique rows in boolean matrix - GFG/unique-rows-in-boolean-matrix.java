@@ -35,7 +35,6 @@ public static void main(String[] args)throws IOException
 // } Driver Code Ends
 
 
-/*Complete the given function*/
 class GfG
 {
     public static ArrayList<ArrayList<Integer>> uniqueRow(int arr[][],int n, int m)
