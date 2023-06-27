@@ -79,6 +79,7 @@ class GfG
         Node(int d) {data = d; next = null; }
     }
 */
+
 class Sol
 {
 	public static Node findUnion(Node head1,Node head2)
