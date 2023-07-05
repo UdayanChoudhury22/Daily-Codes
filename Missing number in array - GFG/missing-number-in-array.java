@@ -28,12 +28,12 @@ class GFG {
 // User function Template for Java
 
 class Solution {
-    int missingNumber(int arr[], int n) {
+    int missingNumber(int array[], int n) {
         // Your Code Here
-        int sum = 0 ;
-        for(int i=0;i<n-1;i++)
+        int sum = 0;
+        for(int x:array)
         {
-            sum += arr[i];
+            sum += x;
         }
         int max_sum = (n*(n+1))/2;
         return max_sum - sum;
