@@ -22,9 +22,6 @@ class GFG
 }
 // } Driver Code Ends
 
-
-//User function Template for Java
-
 class Solution{
     static String common(String s1,String s2)
     {
