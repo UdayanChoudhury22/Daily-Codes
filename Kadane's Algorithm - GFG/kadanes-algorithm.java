@@ -30,29 +30,48 @@ class Main {
 
 // } Driver Code Ends
 
-
-class Solution{
-
-    // arr: input array
-    // n: size of array
-    //Function to find the sum of contiguous subarray with maximum sum.
+class Solution
+{
     long maxSubarraySum(int arr[], int n){
         
         // Your code here
-        long max_curr = 0;
-        long max_total = arr[0];
+        long res = arr[0];
+        long local = 0l;
         for(int i=0;i<n;i++)
         {
-            max_curr += arr[i];
-            if(max_total < max_curr)
-                max_total = max_curr;
+            local += arr[i];
             
-            if(max_curr < 0)
-                max_curr = 0;
+            if(local > res)
+                res = local;
+            
+            if(local < 0)
+                local = 0;
         }
-        return max_total;
-        
+        if (res == 0)
+            res = -1l;
+        return res;
     }
     
 }
 
+
+// class Solution{
+//     long maxSubarraySum(int arr[], int n){
+        
+//         // Your code here
+//         long max_curr = 0;
+//         long max_total = arr[0];
+//         for(int i=0;i<n;i++)
+//         {
+//             max_curr += arr[i];
+//             if(max_total < max_curr)
+//                 max_total = max_curr;
+            
+//             if(max_curr < 0)
+//                 max_curr = 0;
+//         }
+//         return max_total;
+        
+//     }
+    
+// }
