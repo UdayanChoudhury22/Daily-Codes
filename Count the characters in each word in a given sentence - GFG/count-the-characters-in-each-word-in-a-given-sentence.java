@@ -36,9 +36,8 @@ class Solution{
         {
             if(s.charAt(i) == ' ')
             {
-                num = temp.length();
+                al.add(temp.length());
                 temp = "";
-                al.add(num);
             }
             else
                 temp += s.charAt(i);
