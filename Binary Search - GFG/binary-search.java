@@ -33,20 +33,16 @@ class Solution {
         // code here
         int low = 0;
         int high = n-1;
-        int mid;
-        while(high>=low)
+        while(low<=high)
         {
-            mid = low+(high-low)/2;
+            int mid = low+(high-low)/2;
             if(arr[mid] == k)
                 return mid;
-            else if(arr[mid] < k)
-            
-                low = mid+1;
-            else
+            else if(arr[mid] > k)
                 high = mid-1;
-            
+            else
+                low = mid+1;
         }
         return -1;
     }
 }
-
