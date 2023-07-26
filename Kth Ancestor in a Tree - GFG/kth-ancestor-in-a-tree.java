@@ -122,6 +122,7 @@ class Node {
     }
 }
 */
+
 class Solution
 {
     int num_node=0;
