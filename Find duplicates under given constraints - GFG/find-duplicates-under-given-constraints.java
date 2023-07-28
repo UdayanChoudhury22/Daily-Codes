@@ -64,3 +64,15 @@ class Compute {
         return -1;
     }
 }
+
+// class Compute {
+    
+//     public int findDuplicate(int a[])
+//     {
+//         if (a[3] == a[4])
+//             return a[3];
+//         else if (a[4] == a[5])
+//             return a[4];
+//         return a[5];
+//     }
+// }
