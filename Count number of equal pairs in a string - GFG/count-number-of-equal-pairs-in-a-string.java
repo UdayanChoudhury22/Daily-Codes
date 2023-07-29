@@ -25,6 +25,7 @@ class GfG
 
 //User function Template for Java
 
+
 class Sol
 {
     long equalPairs (String s)
