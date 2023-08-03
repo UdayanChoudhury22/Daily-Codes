@@ -1,0 +1,35 @@
+# Good String
+## Easy
+<div class="problems_problem_content__Xm_eO"><p><span style="font-size:20px">Given a string <strong>s</strong>&nbsp;of length&nbsp;<strong>N</strong>,&nbsp;you have to tell whether it is good or not. A&nbsp;<em>good</em>&nbsp;string is one where the distance between <strong>every</strong>&nbsp;two adjacent character is exactly&nbsp;1. Here distance is defined by minimum distance between two character when alphabets from&nbsp;'<strong>a</strong>' to <strong>'z' </strong>are put in cyclic manner. For example distance between 'a' to 'c' is 2 and distance between 'a' to 'y' is also 2. The task is to print <strong>"YES"</strong> or <strong>"NO"&nbsp;</strong>(without quotes) depending on whether the given string is Good or not.</span></p>
+
+<p>&nbsp;</p>
+
+<p><span style="font-size:18px"><strong>Example 1:</strong></span></p>
+
+<pre><span style="font-size:18px"><strong>Input:</strong> s = "aaa"
+<strong>Output:</strong> NO
+<strong>Explanation:</strong> distance between 'a' and 'a' is not 1.</span></pre>
+
+<p>&nbsp;</p>
+
+<p><span style="font-size:18px"><strong>Example 2:</strong></span></p>
+
+<pre><span style="font-size:18px"><strong>Input:</strong> s = "cbc"
+<strong>Output:</strong> YES
+<strong>Explanation:</strong> distance between 'b' and 'c' is 1.</span></pre>
+
+<p>&nbsp;</p>
+
+<p><span style="font-size:18px"><strong>Your Task:&nbsp;&nbsp;</strong><br>
+You don't need to read input or print anything. Your task is to complete the function&nbsp;<strong>isGoodString()</strong>&nbsp;which accepts a string as input parameter and returns "YES" or "NO" (without quotes) accordingly.</span><br>
+&nbsp;</p>
+
+<p><span style="font-size:18px"><strong>Expected Time Complexity:</strong>&nbsp;O(N)<br>
+<strong>Expected Auxiliary Space:</strong>&nbsp;O(1)</span><br>
+&nbsp;</p>
+
+<p><span style="font-size:18px"><strong>Constraints:</strong><br>
+String contains only lower case english alphabets.</span></p>
+
+<p><span style="font-size:18px">1 &lt;= N&nbsp;&lt;= 10<sup>5</sup></span></p>
+</div>
