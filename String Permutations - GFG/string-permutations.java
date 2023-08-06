@@ -34,7 +34,6 @@ class Main {
 //User function Template for Java
 
 
-
 class Solution
 {
     ArrayList<String> arr=new ArrayList<>();
