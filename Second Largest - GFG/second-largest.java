@@ -3,7 +3,7 @@
 
 
 
-
+import java.util.stream.Collectors; 
 import java.util.*;
 import java.io.*;
 
@@ -30,16 +30,23 @@ public class Main {
 // } Driver Code Ends
 
 
+
+//User function Template for Java
+
 class Solution {
     int print2largest(int arr[], int n) {
-        // code here
-        Arrays.sort(arr);
-        for(int i=n-2;i>=0;i--){
-            if(arr[n-1]!=arr[i]){
-                return arr[i];
+        int max=Integer.MIN_VALUE ,temp=Integer.MIN_VALUE;
+        for(int i=0;i<n;i++){
+            if(arr[i]>max){
+            	temp=max;
+                max=arr[i];
+            }
+            if(temp<arr[i]&&arr[i]<max){
+                temp=arr[i];
             }
         }
+        if(temp==Integer.MIN_VALUE)
         return -1;
-        
+        return temp;
     }
 }
