@@ -27,14 +27,13 @@ class Solution{
     static List<Integer> get(int a,int b)
     {
         // code here
-        ArrayList<Integer> al = new ArrayList<>();
         a = a+b;
         b = a-b;
         a = a-b;
         
+        ArrayList<Integer> al = new ArrayList<>();
         al.add(a);
         al.add(b);
-        
         return al;
     }
 }
