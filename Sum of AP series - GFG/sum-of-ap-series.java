@@ -34,10 +34,13 @@ class Solution
     public long sum_of_ap(long n, long a, long d)
     {
         // Code here
-        long sum = 0;
-        for(int i = 0; i < n; i++)
+        long i=a;
+        long sum = 0l;
+        while(n>0)
         {
-            sum = sum + a + d*i;
+            sum += i;
+            i+=d;
+            n--;
         }
         return sum;
     }
