@@ -47,18 +47,18 @@ class Check{
     { 
         // Complete the function
         HashMap<Integer,Integer> map = new LinkedHashMap<>();
-        for(int x:arr)
+        for(int i=0;i<n;i++)
         {
-            if(map.containsKey(x))
-                map.put(x,map.get(x)+1);
+            if(map.containsKey(arr[i]))
+                map.put(arr[i],map.get(arr[i])+1);
             else
-                map.put(x,1);
+                map.put(arr[i],1);
         }
         
-        for(Map.Entry<Integer,Integer> num: map.entrySet())
+        for(Map.Entry<Integer,Integer> val:map.entrySet())
         {
-            if(num.getValue() == 1)
-                return num.getKey();
+            if(val.getValue() == 1)
+                return val.getKey();
         }
         return -1;
     }  
