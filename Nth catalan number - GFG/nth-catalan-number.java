@@ -24,7 +24,6 @@ class GFG {
 // } Driver Code Ends
 
 
-
 class Solution {
    static int m = 1000000007;
     public static int findCatalan(int n) {
