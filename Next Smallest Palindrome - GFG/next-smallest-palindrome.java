@@ -29,7 +29,6 @@ class GFG {
 // } Driver Code Ends
 
 
-
 class Solution {
 
     Vector<Integer> generateNextPalindrome(int a[], int n) {
