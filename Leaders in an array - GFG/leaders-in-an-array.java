@@ -44,32 +44,22 @@ class Array {
 
 // } Driver Code Ends
 
-
 class Solution{
-    // static void reverse(int arr[],int n)
-    // {
-    //     for(int i=0;i<=n/2;i++)
-    //     {
-    //         int temp = arr[i];
-    //         arr[i] = arr[n-i-1];
-    //         arr[n-i-1] = temp;
-    //     }
-    // }
     //Function to find the leaders in the array.
     static ArrayList<Integer> leaders(int arr[], int n){
         // Your code here
-        ArrayList<Integer> res = new ArrayList<>();
-        res.add(arr[n-1]);
-        int max = arr[n-1];
-        for(int i=n-2;i>=0;i--)
+        ArrayList<Integer> al = new ArrayList<>();
+        int ans=arr[n-1];
+        al.add(ans);
+        for(int i=n-2 ;i>=0; i--)
         {
-            if(arr[i] >= max)
+            if(arr[i] >= ans)
             {
-                res.add(arr[i]);
-                max = arr[i];
+                ans = arr[i];
+                al.add(ans);
             }
         }
-        Collections.reverse(res);
-        return res;
+        Collections.reverse(al);
+        return al;
     }
 }
