@@ -30,53 +30,29 @@ class Solution
     static int extractMaximum(String S) 
     { 
         // code here
-        int maximum = Integer.MIN_VALUE;
+        int max = Integer.MIN_VALUE;
+        int num=0;
         boolean flag = false;
-        int num = 0;
         for(int i=0;i<S.length();i++)
         {
-            if(Character.isDigit(S.charAt(i)))
+            char ch = S.charAt(i);
+            if(Character.isAlphabetic(ch))
             {
-                num = num *10 + (S.charAt(i) - '0');
-                flag = true;
+                if(num > max)
+                    max = num;
+                
+                num = 0;
             }
             else
             {
-                maximum = Math.max(num,maximum);
-                num = 0;
+                num = num * 10 + (ch -'0'); 
+                flag = true;
             }
         }
-        if(flag)
-            return Math.max(maximum,num);
-        else
-            return -1;
+        if(num > max)
+            max = num;
+        if(flag == false)
+           return -1;
+        return max;
     }    
 } 
-
-
-// class Solution 
-// { 
-//     static int extractMaximum(String S) 
-//     { 
-//         int num = 0, res = 0, flag = 0; 
-//         for (int i = 0; i<S.length(); i++) 
-//         { 
-//             // If a numeric value comes, start converting 
-//             // it into an integer till there are consecutive 
-//             // numeric digits 
-//             if (Character.isDigit(S.charAt(i))) 
-//             {
-//                 num = num * 10 + (S.charAt(i)-'0'); 
-//                 flag = 1;
-//             }
-//             else
-//             { 
-//                 res = Math.max(res, num); 
-//                 num = 0; 
-//             } 
-//         } 
-//         if (flag==1)
-//             return Math.max(res, num); 
-//         else
-//             return -1;
-//     }    
