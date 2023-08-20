@@ -30,6 +30,7 @@ public class Main {
 
 // } Driver Code Ends
 
+
 class Solution {
     int count(int[] arr, int n, int x) {
         // code here
