@@ -21,15 +21,15 @@ class GFG {
 
 
 //User function Template for Java
-
 class Solution {
-    int isPalindrome(String S) {
-        // code here
-        int n = S.length();
-        for(int i=0;i<n/2;i++)
+    int isPalindrome(String s) {
+         int l=0; int h=s.length()-1;
+          while(l<=h)
         {
-            if(S.charAt(i) != S.charAt(n-i-1))
-                return 0;
+            if(s.charAt(l)!=s.charAt(h))
+            return 0;
+            
+            l++; h--;
         }
         return 1;
     }
