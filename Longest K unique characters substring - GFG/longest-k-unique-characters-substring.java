@@ -19,8 +19,6 @@ class GfG {
 // } Driver Code Ends
 
 
-// User function Template for Java
-
 class Solution {
     public int longestkSubstr(String s, int k) {
         HashMap<Character, Integer> m = new HashMap<>();
