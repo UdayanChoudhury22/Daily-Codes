@@ -37,8 +37,6 @@ class GFG{
 // } Driver Code Ends
 
 
-//User function Template for Java
-
 class Solution{
     static char[][] fill(int n, int m, char a[][])
     {
