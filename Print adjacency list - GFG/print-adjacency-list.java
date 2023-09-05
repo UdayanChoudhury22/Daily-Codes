@@ -36,7 +36,6 @@ class GFG {
 // } Driver Code Ends
 
 
-//User function Template for Java
 class Solution {
     public List<List<Integer>> printGraph(int V, int edges[][]) {
         List<List<Integer>> al = new  ArrayList<>();
