@@ -30,7 +30,6 @@ class GFG {
 }
 // } Driver Code Ends
 
-
 class Solution {
     int minimumMultiplications(int[] arr, int start, int end) {
       int n = arr.length;
