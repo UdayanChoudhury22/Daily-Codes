@@ -38,28 +38,25 @@ class Sorting
 
 class Solution
 {
-  static void insert(int arr[],int n)
+  static void insert(int arr[],int i)
   {
        // Your code here
-       int temp;
-       int j;
-       for(int i=1;i<arr.length;i++)
-       {
-           temp = arr[i];
-           j = i-1;
-           
-           while(j>=0 && temp <= arr[j])
-           {
-               arr[j+1] = arr[j];
-               j = j-1;
-           }
-           arr[j+1] = temp;
-       }
   }
   //Function to sort the array using insertion sort algorithm.
   public void insertionSort(int arr[], int n)
   {
       //code here
-      insert(arr,n);
+      for(int j=1;j<n;j++)
+      {
+          int key = arr[j];
+          int i = j-1;
+          while((i>-1) && (arr[i] > key))
+          {
+              arr[i+1] = arr[i];
+              i--;
+          }
+          arr[i+1] = key;
+          
+      }
   }
 }
