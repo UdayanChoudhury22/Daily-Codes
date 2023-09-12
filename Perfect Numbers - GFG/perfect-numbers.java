@@ -10,7 +10,7 @@ class GFG {
             new BufferedReader(new InputStreamReader(System.in));
         int t = Integer.parseInt(read.readLine());
         while (t-- > 0) {
-            Long N = Long.parseLong(read.readLine());
+            long N = Long.parseLong(read.readLine());
 
             Solution ob = new Solution();
             System.out.println(ob.isPerfectNumber(N));
@@ -22,24 +22,21 @@ class GFG {
 
 //User function Template for Java
 
-
-
-
 class Solution {
-    static int isPerfectNumber(Long N) {
+    static int isPerfectNumber(long n) {
         // code here
-        int sum = 1;
+        if(n==1)
+        return 0;
         
-        for(int i=2;i<=Math.sqrt(N);i++){
-            if(N%i==0){
-                if(i==N/i) sum+=i;
-                else{
-                    sum+=i;
-                    sum+=N/i;
-                }
-            }
+        long sum=1;
+         for(long i=2; i*i<=n; i++)
+        {
+            if(n%i==0)
+            sum = sum + i + n/i;
         }
-       // System.out.println(sum);
-        return (N==sum && N!=1)?1:0;
+        if(sum==n)
+        return 1;
+        
+        return 0;
     }
 };
