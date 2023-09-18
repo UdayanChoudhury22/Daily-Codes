@@ -31,6 +31,7 @@ class Driver_class
 
 
 //User function Template for Java
+
 class Solution{
     
     // Function to check if given number n is a power of two.
