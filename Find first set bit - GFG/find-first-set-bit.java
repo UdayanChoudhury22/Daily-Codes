@@ -23,6 +23,7 @@ class Main {
 
 
 //User function Template for Java
+
 class Solution
 {
     //Function to find position of first set bit in the given number.
