@@ -28,8 +28,6 @@ class GFG
 // } Driver Code Ends
 
 
-//User function Template for Java
-
 class Solution
 {
     ArrayList<Integer> rotate(int n, int d)
