@@ -29,19 +29,19 @@ import java.util.*;
 // User function Template for Java
 
 class Solution {
-    int binarysearch(int arr[], int n, int k) {
+    int binarysearch(int arr[], int n, int key) {
         // code here
+        int high = arr.length-1;
         int low = 0;
-        int high = n-1;
         while(low<=high)
         {
             int mid = low+(high-low)/2;
-            if(arr[mid] == k)
+            if(arr[mid] == key)
                 return mid;
-            else if(arr[mid] > k)
-                high = mid-1;
-            else
+            else if(arr[mid] < key)
                 low = mid+1;
+            else
+                high = mid-1;
         }
         return -1;
     }
