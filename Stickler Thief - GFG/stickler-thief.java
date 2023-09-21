@@ -30,6 +30,7 @@ class GFG
 }
 // } Driver Code Ends
 
+
 class Solution
 {
     //Function to find the maximum money the thief can get.
