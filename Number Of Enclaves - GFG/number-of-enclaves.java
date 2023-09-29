@@ -33,6 +33,7 @@ class GFG {
 }
 // } Driver Code Ends
 
+
 class Solution {
 
     int numberOfEnclaves(int[][] a) {
