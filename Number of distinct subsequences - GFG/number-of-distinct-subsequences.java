@@ -18,7 +18,6 @@ class GFG {
 }
 // } Driver Code Ends
 
-
 class Solution {
     int distinctSubsequences(String S) {
          HashMap<Character, Integer> map = new HashMap<>();
