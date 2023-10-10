@@ -106,80 +106,51 @@ class GFG
 //     Node left, right;
 // }
 
-
 class Solution
 {
-   Node targetAddress = null;
-   public ArrayList<Integer> KDistanceNodes(Node root, int target , int k)
-   {
-       ArrayList<Integer> al = new ArrayList<>();
-       HashMap<Node, Node> hm = new HashMap<>();
-       getParentPointers(hm, root);
+    public static ArrayList<Integer> KDistanceNodes(Node root, int target , int k)
+    {
+        // return the sorted list of all nodes at k dist
+        ArrayList<Integer> list = new ArrayList<>();
+        findKDN(root,target,k,list);
+        Collections.sort(list);
+        return list;
 
-       getTargetAddress(root, target);
+    }
 
-       Queue<Node> q = new ArrayDeque<>();
-       HashMap<Node, Boolean> visited = new HashMap<>();
-       q.offer(targetAddress);
-       visited.put(targetAddress, true);
-       int distance = 0;
-       while (!q.isEmpty() && distance != k) {
-           int size = q.size();
-           for (int i = 0; i < size; i++) {
-               Node n = q.poll();
-               if (n.left != null) {
-                   if (!visited.containsKey(n.left)) {
-                       visited.put(n.left, true);
-                       q.offer(n.left);
-                   }
-               }
-               if (n.right != null) {
-                   if (!visited.containsKey(n.right)) {
-                       visited.put(n.right, true);
-                       q.offer(n.right);
-                   }
-               }
-               if (hm.get(n) != null) {
-                   if (!visited.containsKey(hm.get(n))) {
-                       visited.put(hm.get(n), true);
-                       q.offer(hm.get(n));
-                   }
-               }
-           }
-           distance++;
-       }
-       while (!q.isEmpty()) {
-           al.add(q.poll().data);
-       }
-       Collections.sort(al);
-       return al;
-   }
-   public void getParentPointers(HashMap<Node, Node> hm, Node root) {
-       Queue<Node> q = new ArrayDeque<>();
-       q.offer(root);
-       Node parent = null;
-       while (!q.isEmpty()) {
-           Node curr = q.poll();
-           parent = curr;
-           if (curr.left != null) {
-               q.offer(curr.left);
-               hm.put(curr.left, parent);
-           }
-           if (curr.right != null) {
-               q.offer(curr.right);
-               hm.put(curr.right, parent);
-           }
-       }
-   }
-   public Node getTargetAddress(Node root, int target) {
-       if (root == null)
-           return null;
-       getTargetAddress(root.left, target);
-       if (root.data == target) {
-           targetAddress = root;
-       }
-       getTargetAddress(root.right, target);
-       return root;
-   }
-   
+    static void findKDNdown(Node node, int k, ArrayList<Integer> list){
+        if(node==null || k<0) return;
+        if(k==0){
+            list.add(node.data);
+            return;
+        }
+
+        findKDNdown(node.left,k-1,list);
+        findKDNdown(node.right,k-1,list);
+    }
+
+    static int findKDN(Node node, int target, int k, ArrayList<Integer> list){
+        if(node==null) return -1;
+        if(node.data==target){
+            findKDNdown(node,k,list);
+            return 0;
+        }
+
+        int ld = findKDN(node.left,target,k,list);
+        if(ld!=-1){
+            if(ld+1==k) list.add(node.data);
+            else findKDNdown(node.right,k-ld-2,list);
+            return ld+1;
+        }
+
+        int rd = findKDN(node.right,target,k,list);
+        if(rd!=-1){
+            if(rd+1==k) list.add(node.data);
+            else findKDNdown(node.left,k-rd-2,list);
+            return rd+1;
+        }
+        return -1;
+    }
+
+
 };
