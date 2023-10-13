@@ -58,7 +58,6 @@ class GFG {
 // } Driver Code Ends
 
 
-// User function Template for Java
 class Solution {
     public static int floor(Node root, int x) {
         // Code here
