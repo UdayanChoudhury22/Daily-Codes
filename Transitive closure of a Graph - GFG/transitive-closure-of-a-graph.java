@@ -31,6 +31,7 @@ class GFG{
 
 
 //User function Template for Java
+
 class Solution{
     static ArrayList<ArrayList<Integer>> transitiveClosure(int n, int graph[][])
     {
