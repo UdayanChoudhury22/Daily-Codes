@@ -23,7 +23,6 @@ class GfG {
 
 // } Driver Code Ends
 
-
 class Solution{
     
     long numberOfPaths(int m, int n) {
